@@ -1,51 +1,68 @@
 Inventory App
 
-This is a React-based Inventory Management application.
-It was bootstrapped with Create React App and can be run locally or deployed for production.
+This project is an Inventory Management System built with React.
+It is fully functional and can be run locally on your computer or mobile device.
 
-Getting Started (Run Locally)
+Features
 
-Follow these steps to get the app running on your local machine:
+Add, update, and delete stock items
 
-1. Clone the Repository
+Keep track of inventory in real-time
 
-Open your terminal and run:
+Fully responsive UI
 
+Getting Started (Desktop & Mobile)
+Prerequisites
+
+Node.js
+ installed
+
+NPM comes with Node.js
+
+PC and Mobile on the same Wi-Fi network (for mobile access)
+
+1. Clone the repository
 git clone https://github.com/riyazansari/inventory_app.git
 cd inventory_app
-2. Install Dependencies
-
-Make sure you have Node.js and npm installed. Then run:
-
+2. Install dependencies
 npm install
-3. Start the Development Server
-
-To run the app in development mode:
-
+3. Run the app (Desktop)
 npm start
 
-This will open the app in your browser at http://localhost:3000
+Open your browser at: http://localhost:3000
 
-The page will reload automatically if you make edits
+The app will automatically reload if you make edits.
 
-You’ll also see any lint errors in the terminal
+4. Run the app (Mobile)
 
-Available Scripts
+Find your PC’s local IP address:
 
-In the project directory, you can run:
+ipconfig   # Windows
+ifconfig   # Mac/Linux
 
-Command	Description
-npm start	Runs the app in development mode at http://localhost:3000
+Example: 192.168.1.10
 
-npm test	Launches the test runner in interactive watch mode
-npm run build	Builds the app for production in the build/ folder. Optimized and minified for best performance
-npm run eject	Ejects the configuration (one-way operation, usually not needed)
-Build for Production
+Start the React server with network access:
 
-To deploy your app or create a production-ready version:
+npm start -- --host 0.0.0.0
 
+On your mobile browser, open:
+
+http://<YOUR_PC_IP>:3000
+
+Example: http://192.168.1.10:3000
+
+Now you can see and use the full app on mobile!
+
+5. Build for Production
 npm run build
 
-This will generate a build/ folder with optimized files
+Creates a build/ folder with optimized production files
 
-You can then deploy it to GitHub Pages, Netlify, Vercel, or any hosting service
+Ready to deploy on any hosting service
+
+6. Optional: Share with Anyone using ngrok
+npm install -g ngrok
+ngrok http 3000
+
+This gives you a public URL to access your app from any device
